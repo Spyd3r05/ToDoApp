@@ -140,8 +140,13 @@ ul li span:hover{
     width: 30px;
     height: 30px;
   }
-   .add-task{
-   float: right;
-   right: 5px;
+  .task-input{
+    align-items: flex-start;
+    justify-content: center;
   }
+  .add-task{
+    height: inherit;
+
+  }
+ 
 }
