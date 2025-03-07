@@ -58,6 +58,7 @@ input{
 
 input::placeholder{
   font-size: 16px;
+  color: white;
 }
 .add-task{
   background: black;
