@@ -21,19 +21,33 @@ body{
    padding: 20px 10px;
    border-radius: 20px;
    box-shadow: 0 0 10px white;
+   position: relative;
   }
 
 .title{
   color: white;
   position: relative;
   margin-left: 20px;
+  text-align: center;
 }
-.title img{
-  width: 50px;
-  height: 50px;
+.title span{
+  top: -12px;
+  right: 20px;
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  padding: 10px;
+
+}
+#app img{
+  width: 30px;
+  height: 30px;
   position:absolute;
-  right: 5px;
-  top: -6px;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  cursor: pointer;
 }
 .task-input{
   width: 99%;
@@ -41,9 +55,9 @@ body{
   height: 50px;
   border-radius: 20px;
   margin-top: 20px; 
-  display: flex;
+  display: none;
   box-shadow: 0 0 4px white;
-
+position: relative;
 }
 input{
   flex: 1;
@@ -62,7 +76,7 @@ input::placeholder{
 }
 .add-task{
   background: black;
-  width:150px;
+  width:auto;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
@@ -86,12 +100,15 @@ ul li{
   font-size: 16px;
   list-style: none;
   color: white;
-  padding: 10px 20px;
+  padding: 20px 20px;
   background: rgba(128, 128, 128, 0.21);
   border-radius: 10px;
   margin-top: 10px;
   cursor: pointer;
   position: relative;
+  min-height: auto;
+  display: flex;
+  align-items: center;
 }
 
 ul li::before{
@@ -111,21 +128,54 @@ ul li.checked{
 ul li.checked::before{
   background-color: black;
 }
+.text{
+  position: absolute;
+  left: 10%;
+  top: 15px;
+  margin-left: 10px;
+}
+ul li .edit {
+  position: absolute;
+  left: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #ffffff, #cccccc);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition:all 0.3s, transform 0.2s;
+}
 
-ul li span{
+ul li .edit:hover {
+  background: linear-gradient(135deg, #cccccc, #aaaaaa);
+  transform: translateY(-50%) scale(1.1);
+}
+ul li .delete {
   color: white;
   cursor: pointer;
-position: absolute;
-  font-size: 24px;
+  position: absolute;
+  font-size: 20px;
   width: 32px;
   height: 32px;
-  top: 5px;
+  top: 15px;
   right: 5px;
   border-radius: 50%;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #444, #222);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
-ul li span:hover{
-  background: rgba(128, 128, 128, 0.541);
+
+ul li .delete:hover {
+  background: linear-gradient(135deg, #666, #444);
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (max-width:450px){
