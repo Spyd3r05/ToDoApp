@@ -3,26 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+  <link rel="shortcut icon" href="./src/assets/favicon_ToDO.png" type="image/png">
     <title>ToDo App || Made with 🖤</title>
+    <link rel="stylesheet" href="./src/style.css">
   </head>
   <body>
     <div id="app">
-      <img src="src/assets/favicon_ToDO.png" alt="" id="calendarIcon" />
-
-      <h2 class="title">
-        SHYNYN CUSTOM MADE TODOAPP
-        <span id="displayTaskInput">+</span>
-      </h2>
+      <h2 class="title">MY TODOS 🤍 <span id="displayTaskInput">+</span></h2>
       <div class="task-input">
-      <input type="text" placeholder="Add task here..." id="task" />
-      <input type="date" name="" id="taskDate" >
-      <button class="add-task" onclick="addTask()">ADD</button>
-    </div>
+        <input type="text" placeholder="Add task here..." id="task" />
+        <input type="date" id="taskDate" />
+        <button class="add-task" onclick="addTask()">ADD</button>
+      </div>
       <div class="list-container">
         <ul id="tasks"></ul>
       </div>
     </div>
-    <script src="src/main.js"></script>
+
+    <script src="./src/main.js"></script>
   </body>
 </html>
